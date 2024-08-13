@@ -141,8 +141,11 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     recordEvent();
+    initPush();
 
     CleverTapPlugin.setDebugLevel(3);
+    CleverTapPlugin.createNotificationChannel(
+        "fluttertest", "Flutter Test", "Flutter Test", 5, true);
     CleverTapPlugin.registerForPush();
 
     var profile = {
@@ -224,5 +227,18 @@ class _MyHomePageState extends State<MyHomePage> {
     };
 
     CleverTapPlugin.recordEvent("Button Click", eventData);
+  }
+
+  void initPush() async {
+    bool? isPushPermissionEnabled =
+        await CleverTapPlugin.getPushNotificationPermissionStatus();
+    if (isPushPermissionEnabled == null) return;
+
+    if (!isPushPermissionEnabled) {
+      var fallbackToSettings = false;
+      CleverTapPlugin.promptForPushNotification(fallbackToSettings);
+    } else {
+      print("Push Permission is already enabled.");
+    }
   }
 }

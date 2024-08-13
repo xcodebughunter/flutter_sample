@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1028554283621",
+    "project_id": "clevertap-db80d",
+    "storage_bucket": "clevertap-db80d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028554283621:android:280661dfa177d1df72448c",
+        "android_client_info": {
+          "package_name": "com.singoloDigital.ct"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028554283621-4b2t1h42dclhvdung4kk96p7geoo473l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBox7lWw4wWkNRvjX4kkO9yi-W0oNFmvUE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028554283621-4b2t1h42dclhvdung4kk96p7geoo473l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
